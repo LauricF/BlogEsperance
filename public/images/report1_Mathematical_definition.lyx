@@ -1,0 +1,502 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Problem definition
+\end_layout
+
+\begin_layout Author
+Lauric Ferrat
+\end_layout
+
+\begin_layout Part*
+Introduction
+\end_layout
+
+\begin_layout Standard
+Tools and methods have recently improved greatly, and T1D prediction using
+ genetic screening and subsequent Islet aab surveillance can now be cost‐effecti
+ve.
+ In this article we develop a mathematical framework to demonstrate how
+ artificial intelligence can greatly disminish the screening cost compared
+ to classic approach.
+ As this setting can be seen in many medical fields, we will keep the notation
+ as general as possible.
+\end_layout
+
+\begin_layout Section
+Definition 
+\end_layout
+
+\begin_layout Standard
+Let define 
+\begin_inset Formula $T$
+\end_inset
+
+ the ensemble of possible time of visit for an individual.
+ For example 
+\begin_inset Formula $T$
+\end_inset
+
+ can be equal to the set of visit every three months until age 5.
+ Let define 
+\begin_inset Formula $n_{T}\in N$
+\end_inset
+
+ the number of possible visits, with our exemple 
+\begin_inset Formula $n_{T}=5*4=20$
+\end_inset
+
+.
+ Finally let note the time of a visit 
+\begin_inset Formula $t\in T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let define the situation of an individual 
+\begin_inset Formula $i$
+\end_inset
+
+ at time 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $S_{i}(t)\in(\O,s,c,p,d)$
+\end_inset
+
+ where 
+\begin_inset Formula $(\O,s,c,p,d)$
+\end_inset
+
+ are respectively defined by
+\end_layout
+
+\begin_layout Standard
+nothing done, simple visit to gain more information, complete visit to actively
+ monitor progression and/or give preventive treatement, disease onset with
+ preventive action undertaken and/or active monitoring, disease onset without
+ prevention undertaken and/or active monitoring.
+ For most of disease most of the time,and for the majority of the population
+ there is no need to visits regularly and thus, the most frequent state
+ should be 
+\begin_inset Quotes eld
+\end_inset
+
+nothing done
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+simple visit to gain more information
+\begin_inset Quotes erd
+\end_inset
+
+ is an important visits which give the possibility to reavulate the risk
+ of the disease and decide to potentialy start more useful but more expensive
+ and constraining 
+\begin_inset Quotes eld
+\end_inset
+
+complete visit to actively monitor progression and/or give preventive treatement
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Finaly the two last states 
+\begin_inset Quotes eld
+\end_inset
+
+disease onset with preventive action undertaken and/or active monitoring
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+disease onset without prevention undertaken and/or active monitoring
+\begin_inset Quotes erd
+\end_inset
+
+ show a respective useful follow up against a bad follow up.
+\end_layout
+
+\begin_layout Standard
+Let define the sum of this events for the individual accros the period of
+ time 
+\begin_inset Formula $T$
+\end_inset
+
+; 
+\begin_inset Formula $n_{si}\in N$
+\end_inset
+
+, 
+\begin_inset Formula $n_{si}=\sum_{t\in T}S(t)=s$
+\end_inset
+
+ , the total number of visits to gain more information, 
+\begin_inset Formula $n_{ci}\in N$
+\end_inset
+
+,
+\begin_inset Formula $n_{ci}=\sum_{t\in T}S(t)=c$
+\end_inset
+
+, the total number of visits under intense prevention.
+ Let define presence of a disease with non surprising onset, 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p_{i}=\begin{cases}
+1 & \text{if }t\in T,S_{i}(t)=p\\
+0 & \text{otherwise}
+\end{cases}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Let define presence of surprising disease onset, 
+\begin_inset Formula $d_{i}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $d_{i}=\begin{cases}
+1 & \text{if }t\in T,S_{i}(t)=d\\
+0 & \text{otherwise}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+finaly let define the sum of the event for the populations, respectively
+ 
+\begin_inset Formula $n_{s}=\sum_{i}n_{si}$
+\end_inset
+
+ , 
+\begin_inset Formula $n_{c}=\sum_{i}n_{ci}$
+\end_inset
+
+, 
+\begin_inset Formula $n_{p}=\sum_{i}p_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $n_{d}=\sum_{i}d_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Problem
+\end_layout
+
+\begin_layout Subsection
+Multi objective problem
+\end_layout
+
+\begin_layout Standard
+The risk for individual is different between individuals and is dependant
+ of time.
+\end_layout
+
+\begin_layout Standard
+We have for each individuals acess to information to estimate their risk
+ at birth, 
+\begin_inset Formula $x_{io}$
+\end_inset
+
+, and for each individual at the cost to increment the number of 
+\begin_inset Formula $n_{si}$
+\end_inset
+
+ by 1, we can have more visits to collect information at other time 
+\begin_inset Formula $t,$
+\end_inset
+
+ 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The objective of the screening is to maximize the number of individual who
+ have a disease onset with a preventive treatment/ early treatement 
+\begin_inset Formula $n_{p}$
+\end_inset
+
+ while minimizing the number of visits to gain more information 
+\begin_inset Formula $n_{s}$
+\end_inset
+
+, and complete visits 
+\begin_inset Formula $n_{c}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Single objective problem
+\end_layout
+
+\begin_layout Standard
+The problem can be simplifed into a single objective problem by using cost
+ as a surrogate of 
+\begin_inset Formula $n_{s}$
+\end_inset
+
+, 
+\begin_inset Formula $n_{c}$
+\end_inset
+
+ and 
+\begin_inset Formula $n_{p}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+The problem consist of minimizing 
+\begin_inset Formula $n_{s}C_{s}+$
+\end_inset
+
+
+\begin_inset Formula $n_{c}C_{c}+n_{p}C_{p}+n_{d}C_{d}$
+\end_inset
+
+ where 
+\begin_inset Formula $C_{s}$
+\end_inset
+
+ is the cost of a simple visit, 
+\begin_inset Formula $C_{c}$
+\end_inset
+
+ is the cost of a complete visit, 
+\begin_inset Formula $C_{p}$
+\end_inset
+
+ is the cost of a patient with a good pre-monitoring before disease, 
+\begin_inset Formula $C_{d}$
+\end_inset
+
+ is the treatment cost when patient had no warning of his disease.
+\end_layout
+
+\begin_layout Standard
+The inconvenient of this approach is that the cost are hard to estimated,
+ particularly 
+\begin_inset Formula $C_{p}$
+\end_inset
+
+ and 
+\begin_inset Formula $C_{d}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Approach to solve problem
+\end_layout
+
+\begin_layout Standard
+Use evolutionary algorithm do give for each individual an adequate follow
+ up while keeping the number of simple and complete visits/ cost as small
+ as possible.
+\end_layout
+
+\begin_layout Standard
+Constraint; need solution stable and adaptable to different settings, population
+s
+\end_layout
+
+\begin_layout Section
+Background
+\end_layout
+
+\begin_layout Standard
+The most life threatening complication of type 1 diabetes (T1D), diabetic
+ ketoacidosis (DKA), is not less frequent in recent decades (Dabela 2014
+ Pediatrics), is significantly more prevalent at onset in very young children
+ (Rewers 2007 Pediatrics, Usher-‐Smith 2011 BMJ) and is also more severe
+ in the very young (Jefferies 2015 Sci Reports, Iovane 2018 Acta Biomed,
+ Manuwald 2019 PLoS One, Irigoyen 2012 Ped Endo Rev) (example Figure 1).
+ Mortality rates were cited in 2006 at 0.15%-‐0.3% of pediatric DKA cases
+ (Wolfsdorf 2006 Diab Care).
+ The cost of each pediatric DKA hospital admission in the US is now >$30,000
+ (Desai 2018 Diab Care) and all-‐ cause DKA admissions are increasing especially
+ in young patients (Benoit 2018 MMWR).
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+DKA risk for children
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename DKA_for_children.png
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+T1D is readily predictable before clinical onset by detecting islet-‐specific
+ autoantibodies Islet aab to glutamic acid decarboxylase (GADA), insulinoma
+ antigen 2 (IA2A) and/or insulin (IAA).
+ However, cross-‐ sectional screening of all children at a fixed age either
+ precedes the time when most will have islet aab, requiring expensive repeat
+ testing of all children, or misses testing at the ages when life-‐threatening
+ DKA most often occurs.
+ Because of this, many past T1D research studies have used genetic screening
+ (HLA DR-‐ DQ) at birth followed by islet aab surveillance only of children
+ at greatest genetic risk (DIPP, DAISY, BABYDIAB, DEW-‐IT, DIPIS, PANDA,
+ TEDDY, etc.).
+ However, HLA typing has only moderate sensitivity and specificity, and
+ substantial expense, albeit requiring only one test per child.
+ Since the time from islet aab seroconversion to clinical onset of T1D is
+ shorter in those less than 3 years of age (Ziegler 2013 JAMA) surveillance
+ for islet aab is expensive since it must be rather frequent in this very
+ young age group to avoid DKA making genetic screening efficiency a key
+ consideration in overall strategy.
+ Nevertheless, such islet aab surveillance has repeatedly been shown to
+ be highly effective to prevent severe DKA (Barker 2004 Diab Care, Winkler
+ 2012 Ped Diab, Larsson 2013 Ped Diab).
+ Preventing life threatening conditions affecting children in the first
+ few years of life is squarely within the mission of State newborn screening
+ programs (NBS) funded by medical insurance and state agencies.
+ However, these programs also require the overall approach to be cost-‐effective
+, highlighting a critical need for more efficient components for T1D prediction.
+ An additional benefit to the field, beyond standard newborn screening program
+ goals, is that these children would now be identified and could then be
+ followed at modest cost within standard pediatric medical care.
+ This opens the potential for children at highest risk to gain access to
+ clinical immunotherapy trials to delay or prevent clinical onset.
+ In addition to more efficient prediction components, cost-‐effectiveness
+ will be improved by combining prediction of related autoimmune diseases
+ (such as T1D and celiac disease, CD) using a common approach of genetic
+ screening followed by autoantibody surveillance.
+ It is important to note that TGA appear early in life (Hagopian 2017 Pediatrics
+) most cases not in high risk populations are still missed (Choung 2017
+ Gastroenterology) and untreated CD causes substantial morbidity (Fasano
+ 2006 Best Pract Clin Gastro).
+\end_layout
+
+\end_body
+\end_document

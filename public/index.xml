@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>A Hugo website</title>
+    <link>/</link>
+    <description>Recent content on A Hugo website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 May 2016 21:48:51 -0700</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>prediction of probability to fail</title>
+      <link>/2020/05/22/prediction-of-probability-to-fail/</link>
+      <pubDate>Fri, 22 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/05/22/prediction-of-probability-to-fail/</guid>
+      <description>Prediction in Cox regression with stackexchange
+  How can I obtain prediction intervals for survival prediction in the Cox model? with stackexchange
+  detailed pdf of General theory and r code for cox model
+  Calculating survival probability per person at time (t) from Cox PH with stats.stackexchange
+  How to use r to compute confidence interval for a given age with predictCox package</description>
+    </item>
+    
+    <item>
+      <title>Tips to produce graphics</title>
+      <link>/2020/05/21/graph-in-r/</link>
+      <pubDate>Thu, 21 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/05/21/graph-in-r/</guid>
+      <description>Nice and constructive graphics play an important role when it comes to conveying a message.
+I personnaly use R with ggplot2, a graphic package. the main advantages of ggplot is that is come with a grammar, a series of rules which once learn, make it very easy to create new plots. Thus I recommend to learn ggplot when starting to use R. It is time consuming at first and the curve it steep but it is totally worth in the long term.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Thu, 05 May 2016 21:48:51 -0700</pubDate>
+      
+      <guid>/about/</guid>
+      <description>I am a researcher in applied mathematics working at the university of Exeter. I am interested by the use of statistic and machine learning to improve clinical practice. I am currently working on the prediction of Type 1 diabetes thanks to JDRF sponsoring and my aim is to develop tools to identify children who are likely to develop type 1 diabetes and give them an adequate follow up.</description>
+    </item>
+    
+  </channel>
+</rss>

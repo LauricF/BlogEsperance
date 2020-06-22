@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>measures on A Hugo website</title>
+    <link>/tags/measures/</link>
+    <description>Recent content in measures on A Hugo website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 May 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/measures/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ROC AUC for beginner</title>
+      <link>/2020/05/20/roc-auc-for-beginner/</link>
+      <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/05/20/roc-auc-for-beginner/</guid>
+      <description>When it comes to classification problem ROC AUC, aka, Receiver Operating Characteristics Area Under The Curve, is an important tool to assess the discriminative power of a model.
+It tells how much model is capable of distinguishing between two classes.</description>
+    </item>
+    
+  </channel>
+</rss>
