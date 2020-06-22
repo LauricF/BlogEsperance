@@ -1,0 +1,41 @@
+---
+title: Tips to produce graphics
+author: Lauric
+date: '2020-05-21'
+categories:
+  - R
+tags:
+  - figures
+  - graph
+  - methodology
+slug: graph-in-r
+---
+
+Nice and constructive graphics play an important role when it comes to conveying a message.
+
+
+I personnaly use [R](https://www.r-project.org/) with  [ggplot2](https://ggplot2.tidyverse.org/), a graphic package. the main advantages of ggplot is that is come with a grammar, a series of rules which once learn, make it very easy to create new plots. Thus I recommend to learn ggplot when starting to use R. It is time consuming at first and the curve it steep but it is totally worth in the long term.
+
+However the following rules can be applied to any langage.
+
+## Do not reinvent the wheel
+
+Whatever you want to display, there is a high chance that somebody have already done it.
+
+For simple graph it is often quicker to do them from scratch but for complicated one when there is not a clear idea about what I really want to do, it is usually time-efficient to do a quick research:
+
+Here are my favorit websites to start:
+
+* [Data to viz](https://www.data-to-viz.com/), this really well organised website help to find the best graph given the data you have. There caveat section is very useful to implement clear and accessible plot. 
+Code is in R, Python, D3.js and flourish.
+
+* [The r graph gallery](https://www.r-graph-gallery.com/index.html) is useful to identify quickly an efficient way to display your data with all the necessary code to produce it.
+
+* [Ggplot2 extensions](https://exts.ggplot2.tidyverse.org/gallery/), a large number of package have been made to extend the capability of ggplot2, going through the display item can give you ideas and save you a lot of time.
+
+## Choice of colours
+
+
+* [Friendly palette of colour for colour blind](https://cran.r-project.org/web/packages/colorBlindness/vignettes/colorBlindness.html)
+
+* If you are not suffering from a color vision deficiency it is very hard to imagine how it looks like to be colorblind. [The Color BLIndness Simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/) can close this gap for you.

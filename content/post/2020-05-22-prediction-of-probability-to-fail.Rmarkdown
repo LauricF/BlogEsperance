@@ -1,0 +1,21 @@
+---
+title: prediction of probability to fail
+author: Lauric
+date: '2020-05-22'
+slug: prediction-of-probability-to-fail
+categories:
+  - R
+tags:
+  - probability
+  - survival model
+---
+
+* [Prediction in Cox regression with stackexchange](https://stats.stackexchange.com/questions/36015/prediction-in-cox-regression)
+
+*  [How can I obtain prediction intervals for survival prediction in the Cox model? with stackexchange](https://stats.stackexchange.com/questions/268145/how-can-i-obtain-prediction-intervals-for-survival-prediction-in-the-cox-model)
+
+* [detailed pdf of General theory and r code for cox model](https://kkoehler.public.iastate.edu/stat565/coxph.4page.pdf)
+
+* [Calculating survival probability per person at time (t) from Cox PH with stats.stackexchange](https://stats.stackexchange.com/questions/288393/calculating-survival-probability-per-person-at-time-t-from-cox-ph)
+
+* [How to use r to compute confidence interval for a given age with predictCox package](https://www.rdocumentation.org/packages/riskRegression/versions/2020.02.05/topics/confint.predictCox)
