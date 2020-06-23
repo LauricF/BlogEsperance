@@ -14,9 +14,9 @@ slug: graph-in-r
 Nice and constructive graphics play an important role when it comes to conveying a message.
 
 
-I personnaly use [R](https://www.r-project.org/) with  [ggplot2](https://ggplot2.tidyverse.org/), a graphic package. the main advantages of ggplot is that is come with a grammar, a series of rules which once learn, make it very easy to create new plots. Thus I recommend to learn ggplot when starting to use R. It is time consuming at first and the curve it steep but it is totally worth in the long term.
+I personnaly use [R](https://www.r-project.org/) with  [ggplot2](https://ggplot2.tidyverse.org/), a graphic package. the main advantages of ggplot is that is come with a grammar, a series of rules which once learn, make it very easy to create new plots. Thus I recommend to learn ggplot when starting to use R. It is time consuming at first and the curve is steep but it is totally worth in the long term.
 
-However the following rules can be applied to any langage.
+However the following rules to produce graphics efficiently can be applied to any langage.
 
 ## Do not reinvent the wheel
 
@@ -31,11 +31,12 @@ Code is in R, Python, D3.js and flourish.
 
 * [The r graph gallery](https://www.r-graph-gallery.com/index.html) is useful to identify quickly an efficient way to display your data with all the necessary code to produce it.
 
-* [Ggplot2 extensions](https://exts.ggplot2.tidyverse.org/gallery/), a large number of package have been made to extend the capability of ggplot2, going through the display item can give you ideas and save you a lot of time.
+* [Ggplot2 extensions](https://exts.ggplot2.tidyverse.org/gallery/), a large number of packages have been made to extend the capability of ggplot2, going through the display items can give you ideas and save you a lot of time.
 
 ## Choice of colours
 
+Choice of colours is important and can transform the perception and the time that people are ready to give to a graphic. It is particularly important to choose the right colour as often default colour are all but wonderful. I try to use colour blind people palette when possible;
 
-* [Friendly palette of colour for colour blind](https://cran.r-project.org/web/packages/colorBlindness/vignettes/colorBlindness.html)
+* [Friendly palette of colour for colour blind peope](https://cran.r-project.org/web/packages/colorBlindness/vignettes/colorBlindness.html)
 
 * If you are not suffering from a color vision deficiency it is very hard to imagine how it looks like to be colorblind. [The Color BLIndness Simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/) can close this gap for you.

@@ -18,7 +18,7 @@
       
       <guid>/2020/05/21/graph-in-r/</guid>
       <description>Nice and constructive graphics play an important role when it comes to conveying a message.
-I personnaly use R with ggplot2, a graphic package. the main advantages of ggplot is that is come with a grammar, a series of rules which once learn, make it very easy to create new plots. Thus I recommend to learn ggplot when starting to use R. It is time consuming at first and the curve it steep but it is totally worth in the long term.</description>
+I personnaly use R with ggplot2, a graphic package. the main advantages of ggplot is that is come with a grammar, a series of rules which once learn, make it very easy to create new plots. Thus I recommend to learn ggplot when starting to use R. It is time consuming at first and the curve is steep but it is totally worth in the long term.</description>
     </item>
     
   </channel>
