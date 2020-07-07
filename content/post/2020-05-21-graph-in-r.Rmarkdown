@@ -31,7 +31,7 @@ Code is in R, Python, D3.js and flourish.
 
 * [The r graph gallery](https://www.r-graph-gallery.com/index.html) is useful to identify quickly an efficient way to display your data with all the necessary code to produce it.
 
-* [Ggplot2 extensions](https://exts.ggplot2.tidyverse.org/gallery/), a large number of packages have been made to extend the capability of ggplot2, going through the display items can give you ideas and save you a lot of time.
+* [ggplot2 extensions](https://exts.ggplot2.tidyverse.org/gallery/), a large number of packages have been made to extend the capability of ggplot2, going through the display items can give you ideas and save you a lot of time.
 
 ## Choice of colours
 

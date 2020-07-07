@@ -6,10 +6,20 @@
     <description>Recent content in graph on A Hugo website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 21 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/graph/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Exploring a new data set</title>
+      <link>/2020/07/03/exploring-a-new-data-set/</link>
+      <pubDate>Fri, 03 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/07/03/exploring-a-new-data-set/</guid>
+      <description>Beyond the classic functions like summary(), or str() , there is a set of dedicated packages to explore a new dataset. In this post, I will describe three useful packages which give a good perspective on a new dataset. The first one is visdat which gives tools to visualise at one glance a new dataset.
+Its major functions are vis_dat,vis_miss and ,vis_cor vis_dat takes litteraly “looking at the data”.</description>
+    </item>
     
     <item>
       <title>Tips to produce graphics</title>
