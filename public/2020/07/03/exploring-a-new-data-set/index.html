@@ -60,7 +60,7 @@
 
   <article class="article">
     
-    <span class="article-duration">1 min read</span>
+    <span class="article-duration">2 min read</span>
     
 
     <h1 class="article-title">Exploring a new data set</h1>
@@ -76,20 +76,29 @@
 <p>Beyond the classic functions like <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/summary">summary()</a>, or <a href="https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/str">str()</a> , there is a set of dedicated packages to explore a new dataset. In this post, I will describe three useful packages which give a good perspective on a new dataset.
 The first one is <a href="https://cran.r-project.org/web/packages/visdat/vignettes/using_visdat.html">visdat</a> which gives tools to visualise at one glance a new dataset.</p>
 <p>Its major functions are vis_dat,vis_miss and ,vis_cor
-vis_dat takes litteraly “looking at the data”.</p>
+vis_dat takes litteraly “looking at the data”. This is useful to identify pattern and potential biais in the data.</p>
 <pre class="r"><code>library(visdat)
-vis_dat(typical_data)</code></pre>
+vis_dat(airquality)</code></pre>
 <p><img src="/post/2020-07-03-visualising-missing-data_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 <p>vis_miss gives an insight about missing values</p>
-<pre class="r"><code>vis_miss(typical_data)</code></pre>
+<pre class="r"><code>vis_miss(airquality)</code></pre>
 <p><img src="/post/2020-07-03-visualising-missing-data_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <p>vis_cor which give a quick look at the correlation between the variables</p>
 <pre class="r"><code>vis_cor(airquality,
         na_action = &quot;complete.obs&quot;)</code></pre>
 <p><img src="/post/2020-07-03-visualising-missing-data_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <p>For larger dataset, with more variables and/or a large number of observation I prefer to use <a href="http://naniar.njtierney.com/articles/getting-started-w-naniar.html">naniar</a> which gives tools to visualise at one glance a large dataset and particularly focus on missing values.
-The function</p>
-<p>which data are missing and which variables are co-missing.</p>
+The function gg_miss_upset shows which variables are missing simultanously.</p>
+<pre class="r"><code>library(naniar)</code></pre>
+<pre><code>## Warning: package &#39;naniar&#39; was built under R version 3.6.2</code></pre>
+<pre class="r"><code>gg_miss_upset(airquality,nsets = 10)</code></pre>
+<p><img src="/post/2020-07-03-visualising-missing-data_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>Finally the package <a href="https://cran.r-project.org/web/packages/DataExplorer/vignettes/dataexplorer-intro.html">DataExplorer</a> is a must. With one function a detailed report is generated with a large number of descriptive graphs. Including data structure, univariate distribution for each variables, QQ plot, correlation analysis, principal component analysis,</p>
+<pre class="r"><code>library(DataExplorer)
+DataExplorer::create_report(airquality)</code></pre>
+<p>If one of variable is of particular interest, for example, Ozone, it i possible to indicate it and specific graphs to describe the relationship between this variable and the other variables will be drawn such as bivariate distribution, scatter plot…</p>
+<pre class="r"><code>library(DataExplorer)
+DataExplorer::create_report(airquality, y = &quot;Ozone&quot;)</code></pre>
 
     </div>
   </article>

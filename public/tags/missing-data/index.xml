@@ -18,7 +18,7 @@
       
       <guid>/2020/07/03/exploring-a-new-data-set/</guid>
       <description>Beyond the classic functions like summary(), or str() , there is a set of dedicated packages to explore a new dataset. In this post, I will describe three useful packages which give a good perspective on a new dataset. The first one is visdat which gives tools to visualise at one glance a new dataset.
-Its major functions are vis_dat,vis_miss and ,vis_cor vis_dat takes litteraly “looking at the data”.</description>
+Its major functions are vis_dat,vis_miss and ,vis_cor vis_dat takes litteraly “looking at the data”. This is useful to identify pattern and potential biais in the data.</description>
     </item>
     
   </channel>
